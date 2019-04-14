@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET.S._2019.Pristavko._04
+﻿namespace NET.S._2019.Pristavko._04
 {
-    class Program
+    using System;
+
+    internal class Program
     {      
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            Console.WriteLine(Converter.DoubleToBinaryString(-255.255));
+            Console.ReadLine();
         }
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET.S._2019.Pristavko._04
+﻿namespace NET.S._2019.Pristavko._04
 {
+    using System;
+    using System.Text;
+
     public static class Converter
     {
         /// <summary>
@@ -19,10 +15,14 @@ namespace NET.S._2019.Pristavko._04
             StringBuilder sb = new StringBuilder();
             byte[] doubleByte = BitConverter.GetBytes(doubleNumber);
             foreach (byte b in doubleByte)
+            {
                 for (int i = 0; i < 8; i++)
                 {
+                    Console.Write(b + " ");
                     sb.Insert(0, ((b >> i) & 1) == 1 ? "1" : "0");
                 }
+            }
+
             return sb.ToString();
         }
     }

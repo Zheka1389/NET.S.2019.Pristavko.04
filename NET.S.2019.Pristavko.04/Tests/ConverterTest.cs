@@ -1,14 +1,9 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET.S._2019.Pristavko._04.Tests
+﻿namespace NET.S._2019.Pristavko._04.Tests
 {
+    using NUnit.Framework;
+
     [TestFixture]
-    static class ConverterTest
+    public static class ConverterTest
     {
         [TestCase(-2.255, ExpectedResult = "1100000000000010000010100011110101110000101000111101011100001010")]
         [TestCase(255.255, ExpectedResult = "0100000001101111111010000010100011110101110000101000111101011100")]
@@ -27,6 +22,5 @@ namespace NET.S._2019.Pristavko._04.Tests
         [TestCase(1E-46, ExpectedResult = "0011011001100010010001001100111000100100001011000101010101100001")]
         public static string ConvertToString(this double number)
             => Converter.DoubleToBinaryString(number);
-
     }
 }

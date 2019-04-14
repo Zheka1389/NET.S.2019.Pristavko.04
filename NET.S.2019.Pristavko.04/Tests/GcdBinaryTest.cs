@@ -1,14 +1,10 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET.S._2019.Pristavko._04.Tests
+﻿namespace NET.S._2019.Pristavko._04.Tests
 {
+    using System;
+    using NUnit.Framework;
+
     [TestFixture]
-    class GcdBinaryTest
+    public class GcdBinaryTest
     {
         [TestCase(25, 50, ExpectedResult = 25)]
         [TestCase(50, 25, 0, ExpectedResult = 25)]
